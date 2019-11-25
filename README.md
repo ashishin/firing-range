@@ -11,7 +11,7 @@ is running at https://public-firing-range.appspot.com.
 1. `sudo apt-get install -y git ant unzip google-cloud-sdk-app-engine-java`
 1. Download the Appengine SDK for Java from
    http://cloud.google.com/appengine/downloads and unzip it in a directory.
-   If the current version of Appengine SDK is 1.9.77, then you can use the following commands:
+   If the current version of Appengine SDK is 1.9.77, then you can use the following commands: <br/>
    `wget https://storage.googleapis.com/appengine-sdks/featured/appengine-java-sdk-1.9.77.zip` <br/>
    `unzip appengine-java-sdk-1.9.77.zip`
 1. `git clone https://github.com/ashishin/firing-range.git`
