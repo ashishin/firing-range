@@ -6,20 +6,19 @@ providing synthetic, wide coverage for an array of vulnerabilities.
 It can be deployed as a Google App Engine application. A public instance
 is running at https://public-firing-range.appspot.com.
 
-# Local installation instructions
+# Google Compute Engine Installation Instructions
 
-1. `sudo apt-get install git ant`
+1. `sudo apt-get install -y git ant unzip google-cloud-sdk-app-engine-java`
 1. Download the Appengine SDK for Java from
    http://cloud.google.com/appengine/downloads and unzip it in a directory.
-1. `mkdir github && cd github`
-1. `git clone https://github.com/google/firing-range.git`
+   If the current version of Appengine SDK is 1.9.77, then you can use the following commands:
+   `wget https://storage.googleapis.com/appengine-sdks/featured/appengine-java-sdk-1.9.77.zip`
+   `unzip appengine-java-sdk-1.9.77.zip`
+1. `git clone `
 1. `cd firing-range`
-1. Modify `build.xml` so that the `appengine.sdk` property points to the
-   directory where you unpacked the appengine SDK (you could also unpack it
-   on `../../`, which is the default)
-1. `ant runserver`
+1. `ant runserver -DappengineSdk=../appengine-java-sdk-1.9.77`
 
-The application then will be run locally at http://localhost:8080
+The application then will be run on port 8080 on Google Compute Engine. Make sure to add firewall rule for port 8080.
 
 # License information
 
