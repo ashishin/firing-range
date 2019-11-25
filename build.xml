@@ -3,7 +3,7 @@
 <project name="firing-range" default="war">
 
   <!-- Your working directories, change the value of appengine.sdk accordingly. -->
-  <property name="appengine.sdk" location="../.."/>
+  <property name="appengine.sdk" location="${appengineSdk}"/>
 
   <!-- Check that the SDK value is set and seems sane, so we can give a nicer
        error if not.  -->
@@ -27,7 +27,7 @@
   <property name="http.port" value="8080"/>
 
   <!-- Address for dev_appserver -->
-  <property name="address" value="localhost"/>
+  <property name="address" value="0.0.0.0"/>
 
   <!-- Name of log file to write logs to -->
   <property name="log.file" value="app.log"/>
@@ -67,7 +67,8 @@
 		<get src="https://repo1.maven.org/maven2/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar" dest="${war.dir}/WEB-INF/lib"/>
 		<get src="https://repo1.maven.org/maven2/junit/junit/4.12/junit-4.12.jar" dest="${war.dir}/WEB-INF/lib" />
 		<get src="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar" dest="${war.dir}/WEB-INF/lib"/>
-	</target>
+                <get src="https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar" dest="${war.dir}/WEB-INF/lib"/>
+  </target>
 
   <target name="compile" depends="clean, getjars"
           description="Compile the application servlet code">
