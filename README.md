@@ -14,7 +14,7 @@ is running at https://public-firing-range.appspot.com.
    If the current version of Appengine SDK is 1.9.77, then you can use the following commands:
    `wget https://storage.googleapis.com/appengine-sdks/featured/appengine-java-sdk-1.9.77.zip`
    `unzip appengine-java-sdk-1.9.77.zip`
-1. `git clone <this repository>`
+1. `git clone https://github.com/ashishin/firing-range.git`
 1. `cd firing-range`
 1. `ant runserver -DappengineSdk=../appengine-java-sdk-1.9.77`
 
